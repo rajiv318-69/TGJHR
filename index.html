@@ -1,110 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JasaBanta Studio - Professional design services for logos, banners, thumbnails, and more. Affordable prices with quick turnaround.">
-    <meta name="keywords" content="graphic design, logo design, banner design, thumbnail, affordable design, digital products">
-    <title>JasaBanta Studio - Professional Design Services</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="images/logo.png" alt="JasaBanta Studio Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Welcome to JasaBanta Studio</h1>
-                <p>Professional design services for all your digital needs</p>
-                <a href="#products" class="btn">View Products</a>
-            </div>
-            <div class="hero-image">
-                <img src="images/hero-image.jpg" alt="Design Services">
-            </div>
-        </div>
-    </section>
-
-    <section id="products" class="products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <img src="images/product1.jpg" alt="Logo Design">
-                    <h3>Logo Design</h3>
-                    <p>Professional logo creation for your brand</p>
-                    <a href="https://gizmoshubb.github.io/cartoon-bundle/" class="btn">Get This</a>
-                </div>
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navUl = document.querySelector('nav ul');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        navUl.style.display = navUl.style.display === 'block' ? 'none' : 'block';
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
                 
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <img src="images/product2.jpg" alt="Banner Design">
-                    <h3>Banner Design</h3>
-                    <p>Eye-catching banners for all platforms</p>
-                    <a href="https://gizmoshubb.github.io/cartoon-bundle/" class="btn">Get This</a>
-                </div>
-                
-                <!-- Add all other products following the same pattern -->
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <img src="images/product3.jpg" alt="Thumbnail Design">
-                    <h3>Thumbnail Design</h3>
-                    <p>YouTube thumbnails that increase CTR</p>
-                    <a href="https://gizmoshubb.github.io/cartoon-bundle/" class="btn">Get This</a>
-                </div>
-                
-                <!-- Continue with all other products -->
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>JasaBanta Studio provides high-quality, affordable design services for individuals and businesses. Our team of creative professionals is dedicated to delivering visually stunning designs that meet your specific needs.</p>
-            <p>With quick turnaround times and excellent customer service, we make the design process simple and stress-free.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> Email: contact@jasabanta.com</p>
-                <p><i class="fas fa-phone"></i> Phone: +123 456 7890</p>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 JasaBanta Studio. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    navUl.style.display = 'none';
+                }
+            }
+        });
+    });
+    
+    // Make all product cards clickable (redirect to specified URL)
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', function(e) {
+            // Don't redirect if clicking on the button (let button handle it)
+            if (!e.target.classList.contains('btn')) {
+                window.location.href = 'https://gizmoshubb.github.io/cartoon-bundle/';
+            }
+        });
+    });
+});
