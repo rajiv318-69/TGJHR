@@ -3,293 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartoon Bundle - Premium Cartoon Resources</title>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #ff6b6b;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #ff6b6b;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-            padding: 5rem 2rem;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #fff;
-            color: #ff6b6b;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Products Section */
-        .products {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2.2rem;
-            color: #333;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .product-card {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .product-image {
-            height: 200px;
-            background-color: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-        }
-        
-        .product-info {
-            padding: 1.5rem;
-        }
-        
-        .product-info h3 {
-            margin-bottom: 0.5rem;
-        }
-        
-        .product-info p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        
-        .price {
-            font-weight: 700;
-            color: #ff6b6b;
-            font-size: 1.2rem;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin: 1rem 0 2rem;
-        }
-        
-        .footer-links li {
-            margin: 0 1rem;
-        }
-        
-        .footer-links a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .copyright {
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 1rem;
-            }
-            
-            .nav-links {
-                margin-top: 1rem;
-            }
-            
-            .nav-links li {
-                margin: 0 0.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <meta name="description" content="JasaBanta Studio - Professional design services for logos, banners, thumbnails, and more. Affordable prices with quick turnaround.">
+    <meta name="keywords" content="graphic design, logo design, banner design, thumbnail, affordable design, digital products">
+    <title>JasaBanta Studio - Professional Design Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">CartoonBundle</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Bundles</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="JasaBanta Studio Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
-    
-    <section class="hero">
-        <h1>Premium Cartoon Resources</h1>
-        <p>Get access to thousands of high-quality cartoon assets for your projects at an unbeatable price.</p>
-        <a href="#" class="cta-button">Browse Bundles</a>
-    </section>
-    
-    <section class="products">
-        <div class="section-title">
-            <h2>Featured Bundles</h2>
-        </div>
-        
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">[Bundle Image 1]</div>
-                <div class="product-info">
-                    <h3>Character Bundle</h3>
-                    <p>500+ cartoon characters in various poses and expressions</p>
-                    <div class="price">$49.99</div>
-                </div>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to JasaBanta Studio</h1>
+                <p>Professional design services for all your digital needs</p>
+                <a href="#products" class="btn">View Products</a>
             </div>
-            
-            <div class="product-card">
-                <div class="product-image">[Bundle Image 2]</div>
-                <div class="product-info">
-                    <h3>Background Bundle</h3>
-                    <p>300+ beautifully designed cartoon backgrounds</p>
-                    <div class="price">$39.99</div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">[Bundle Image 3]</div>
-                <div class="product-info">
-                    <h3>Complete Cartoon Pack</h3>
-                    <p>Everything you need to create amazing cartoons</p>
-                    <div class="price">$89.99</div>
-                </div>
+            <div class="hero-image">
+                <img src="images/hero-image.jpg" alt="Design Services">
             </div>
         </div>
     </section>
-    
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/product1.jpg" alt="Logo Design">
+                    <h3>Logo Design</h3>
+                    <p>Professional logo creation for your brand</p>
+                    <a href="https://gizmoshubb.github.io/cartoon-bundle/" class="btn">Get This</a>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/product2.jpg" alt="Banner Design">
+                    <h3>Banner Design</h3>
+                    <p>Eye-catching banners for all platforms</p>
+                    <a href="https://gizmoshubb.github.io/cartoon-bundle/" class="btn">Get This</a>
+                </div>
+                
+                <!-- Add all other products following the same pattern -->
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/product3.jpg" alt="Thumbnail Design">
+                    <h3>Thumbnail Design</h3>
+                    <p>YouTube thumbnails that increase CTR</p>
+                    <a href="https://gizmoshubb.github.io/cartoon-bundle/" class="btn">Get This</a>
+                </div>
+                
+                <!-- Continue with all other products -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>JasaBanta Studio provides high-quality, affordable design services for individuals and businesses. Our team of creative professionals is dedicated to delivering visually stunning designs that meet your specific needs.</p>
+            <p>With quick turnaround times and excellent customer service, we make the design process simple and stress-free.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> Email: contact@jasabanta.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +123 456 7890</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <div class="footer-content">
-            <h3>CartoonBundle</h3>
-            <ul class="footer-links">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
-            <p class="copyright">© 2023 CartoonBundle. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2023 JasaBanta Studio. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
